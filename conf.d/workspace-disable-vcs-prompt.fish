@@ -1,6 +1,6 @@
 status is-interactive || exit
 
-function _workspace_disable_hydro_vcs -v PWD -d 'disable hydro git prompt when inside git workspace'
+function _workspace_disable_hydro_vcs -v PWD -v _workspace_root -d 'disable hydro git prompt when inside git workspace'
   set -q _hydro_git || return
   set -q hydro_ignored_git_paths || set -g hydro_ignored_git_paths
   set -q _workspace_root[1] || return
